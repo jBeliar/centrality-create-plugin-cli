@@ -79,8 +79,8 @@ var questions = [
   }
 ];
 
-const settingsPath = join(process.APPDATA, 'centrality', 'settings', 'settings.json')
-
+const settingsPath = join(process.env.APPDATA, 'centrality', 'settings', 'settings.json')
+1
 const loadJsonAsync = path => {
   return new Promise( (resolve,reject) =>
     readFile(path, 'utf8', (err, data) => {
