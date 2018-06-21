@@ -33,7 +33,7 @@ const onEnter = async (query, item, setInput) => {
   
 }
 
-exports.plugin = tools => {
+exports.plugin = (tools, config) => {
   return {
     name,
     keyword,
@@ -80,7 +80,7 @@ var questions = [
 ];
 
 const settingsPath = join(process.env.APPDATA, 'centrality', 'settings', 'settings.json')
-1
+
 const loadJsonAsync = path => {
   return new Promise( (resolve,reject) =>
     readFile(path, 'utf8', (err, data) => {
